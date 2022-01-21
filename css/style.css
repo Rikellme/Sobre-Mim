@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(to right, rgb(1 10 22), rgb(1 33 42), #03848f);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 14.5vh;
+}
+
+header nav {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav img {
+  width: 100px;
+}
+
+header nav .mobile-menu {
+  display: none;
+}
+
+header nav .mobile-menu div {
+  width: 2rem;
+  height: 2px;
+  background-color: white;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+header nav ul {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 10px;
+  list-style: none;
+  text-align: center;
+  /* justify-content: end; */
+}
+
+header nav ul li {
+  display: flex;
+  display: block;
+  font-weight: bold;
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  height: 14.5vh;
+  text-transform: uppercase;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+header nav ul li:hover {
+  border-bottom: 4px solid #fff;
+  transition: all 0.2s ease-out;
+}
+
+header nav .mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+header nav .mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+header nav .mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin-top: 7rem;
+}
+
+.card-apresentation {
+  height: 86vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background: url(../img/background-2.jpg);
+  background-size: 100% 100%;
+  object-fit: contain;
+  box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 50%);
+  color: white;
+}
+
+.card-apresentation .card-description {
+  width: 70%;
+  max-width: 760px;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: #01363f;
+  margin: 0 auto 4rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.card-apresentation h1 {
+  font-size: clamp(2rem, 5vw, 5rem);
+  margin-bottom: 1rem;
+}
+
+.card-apresentation p {
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  word-spacing: 10px;
+  line-height: 1.8;
+}
+
+.whatsapp-link {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 10;
+  transition: 0.2s ease-in;
+}
+
+.whatsapp-link:hover {
+  transform: scale(1.1);
+  border: 2px solid #2ab200;
+}
+
+.whatsapp-link .fa {
+  margin-top: 14px;
+}
+
+.whatsapp img {
+  width: 35px;
+}
+
+.fa {
+  text-decoration: none;
+}
+
+.who-am {
+  background-color: rgb(231, 231, 231);
+  width: 100%;
+  display: grid;
+  padding: 7rem 0;
+}
+
+.who-am .my-informations {
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+  width: 75%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.who-am .my-informations img {
+  width: 22rem;
+  height: 22rem;
+  border: 0.3rem solid rgb(1 33 42);
+  border-radius: 100%;
+}
+
+.who-am .my-informations p {
+  width: 90%;
+  line-height: 1.8;
+  word-spacing: 10px;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.principles {
+  display: grid;
+  place-items: center;
+  padding: 7rem 0;
+}
+
+.principles .cards-principles {
+  width: 90%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 7rem;
+}
+
+.principles .cards-principles .card {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.principles .cards-principles .card img {
+  width: 240px;
+}
+
+.principles .cards-principles .card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.principles .cards-principles .card p {
+  text-align: justify;
+  color: #737380;
+}
+
+.projects {
+  background-color: rgb(231, 231, 231);
+  width: 100%;
+  display: grid;
+
+  padding: 7rem 0;
+}
+
+.projects .container-projects {
+  width: 75%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+hr {
+  margin: 6rem 0;
+}
+
+.projects .container-projects .project img {
+  width: 19.7rem;
+  height: 280px;
+}
+.projects .container-projects .project .informations {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.projects .container-projects .project .informations h2 {
+  color: #03848f;
+  margin: 3rem 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.projects .container-projects .project .informations p {
+  line-height: 1.9;
+  word-spacing: 10px;
+  font-size: 18px;
+}
+
+.reconsiderations {
+  width: 100%;
+  display: grid;
+  padding: 7rem 0;
+}
+
+.reconsiderations h1 {
+  margin-bottom: 0;
+}
+
+.reconsiderations .content-reconsiderations {
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+}
+
+.reconsiderations .content-reconsiderations img {
+  width: 75%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.reconsiderations .content-reconsiderations .thanks {
+  display: grid;
+  gap: 3rem;
+  text-align: center;
+}
+
+.reconsiderations .content-reconsiderations .thanks h2 {
+  color: #03848f;
+  font-size: clamp(1rem, 4vw, 2rem);
+}
+
+.reconsiderations .content-reconsiderations .thanks p {
+  font-size: clamp(0.5rem, 2.5vw, 1.3rem);
+}
+
+.reconsiderations .content-reconsiderations .thanks p strong {
+  color: #03848f;
+}
+
+footer {
+  background: linear-gradient(to right, rgb(1 10 22), rgb(1 33 42), #03848f);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 0;
+  font-size: 1.2rem;
+}
+
+footer .social-medias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  color: white;
+}
+
+footer .social-medias a:hover {
+  transform: scale(1.2);
+}
+
+footer .social-medias a i {
+  font-size: 40px;
+  color: white;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 800px) {
+  .who-am .my-informations {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .who-am .my-informations p {
+    width: 50%;
+    text-align: left;
+  }
+
+  .principles .cards-principles {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .principles .cards-principles .card {
+    max-width: 360px;
+  }
+
+  .projects .container-projects .project .informations h2 {
+    margin-top: 0;
+  }
+
+  .projects .container-projects .project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .reconsiderations .content-reconsiderations {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 999px) {
+  header nav ul {
+    position: absolute;
+    top: 7rem;
+    right: 0;
+    width: 50vw;
+    height: 86vh;
+    background: linear-gradient(to right, rgb(1 10 22), rgb(1 33 42), #03848f);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  header nav ul li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  header nav .mobile-menu {
+    display: block;
+  }
+
+  header nav .mobile-menu:hover {
+    cursor: pointer;
+  }
+
+  header nav ul.active {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px) {
+  header nav ul {
+    width: 100vw;
+  }
+}
