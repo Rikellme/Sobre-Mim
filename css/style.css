@@ -22,7 +22,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  height: 14.5vh;
+  height: 80;
 }
 
 header nav {
@@ -63,7 +63,7 @@ header nav ul li {
   display: flex;
   display: block;
   font-weight: bold;
-  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
   height: 14.5vh;
   text-transform: uppercase;
 }
@@ -134,12 +134,14 @@ header nav .mobile-menu.active .line3 {
 .card-apresentation h1 {
   font-size: clamp(2rem, 5vw, 5rem);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .card-apresentation p {
   font-size: clamp(1rem, 3vw, 1.6rem);
   word-spacing: 10px;
   line-height: 1.8;
+  text-align: center;
 }
 
 .whatsapp-link {
@@ -171,10 +173,6 @@ header nav .mobile-menu.active .line3 {
   width: 35px;
 }
 
-.fa {
-  text-decoration: none;
-}
-
 .who-am {
   background-color: rgb(231, 231, 231);
   width: 100%;
@@ -198,7 +196,6 @@ header nav .mobile-menu.active .line3 {
 }
 
 .who-am .my-informations p {
-  width: 90%;
   line-height: 1.8;
   word-spacing: 10px;
   font-size: 18px;
@@ -263,15 +260,24 @@ header nav .mobile-menu.active .line3 {
   max-width: 1000px;
   margin: 0 auto;
   padding-bottom: 2rem;
+  display: grid;
+  gap: 2rem;
 }
 
-hr {
-  margin: 6rem 0;
+.projects .container-projects .project {
+  box-shadow: 0px 0px 15px #03838f62;
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .projects .container-projects .project img {
   width: 19.7rem;
   height: 280px;
+  border-left: 1rem solid #03848f;
+  border-bottom: 1rem solid #03848f;
+  border-radius: 15px;
+  box-shadow: -10px 10px 5px #03838f62;
 }
 .projects .container-projects .project .informations {
   display: flex;
@@ -289,6 +295,7 @@ hr {
   line-height: 1.9;
   word-spacing: 10px;
   font-size: 18px;
+  color: #595961;
 }
 
 .reconsiderations {
@@ -339,8 +346,12 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3em 0;
+  padding: 3em 0.5rem;
   font-size: 1.2rem;
+}
+
+footer p {
+  text-align: center;
 }
 
 footer .social-medias {
@@ -418,9 +429,16 @@ footer .social-medias a i {
     justify-content: space-around;
   }
 
+  .who-am .my-informations img {
+    width: 24rem;
+    height: 27rem;
+    margin-bottom: 0;
+  }
+
   .who-am .my-informations p {
     width: 50%;
     text-align: left;
+    margin-top: 0;
   }
 }
 
